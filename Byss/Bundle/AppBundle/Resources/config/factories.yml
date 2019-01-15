@@ -1,0 +1,16 @@
+parameters:
+  pim_catalog.factory.value.multi_image.class: Byss\Bundle\AppBundle\Factory\Value\MultiImageValueFactory
+
+services:
+  pim_catalog.factory.value.multi_image:
+    class: '%pim_catalog.factory.value.multi_image.class%'
+    public: false
+    arguments:
+      - '%pim_catalog.entity.value.multi_image.class%'
+      - !php/const:\Byss\Bundle\AppBundle\AttributeType\ByssAttributeTypes::MULTI_IMAGE
+    tags:
+      - { name: pim_catalog.factory.value }
+
+
+
+

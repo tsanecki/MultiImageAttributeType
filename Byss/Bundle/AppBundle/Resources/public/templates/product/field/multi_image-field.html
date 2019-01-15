@@ -1,0 +1,29 @@
+<div class="byss-multi-image" >
+    <div class="AknMediaField">
+        <input class="AknMediaField-fileUploaderInput" id="<%- fieldId %>" type="file" data-locale="<%- locale %>" multiple="multiple" data-scope="<%- scope %>" <%- editMode === 'view' ? 'disabled' : '' %>/>
+        <div class="AknMediaField-emptyContainer">
+            <span title="upload icon" class="AknMediaField-uploadIcon"/>
+            <span><%- _.__('pim_enrich.entity.product.media.upload')%></span>
+        </div>
+    </div>
+    <div class="progress"></div>
+    <div class="preview">
+    <% if (value && value.data) { %>
+        <% _.each(value.data, function (f) { %>
+        <% mediaThumbnailUrl = mediaUrlGenerator.getMediaShowUrl(f, 'thumbnail_small') %>
+        <% mediaPreviewUrl   = mediaUrlGenerator.getMediaShowUrl(f, 'preview') %>
+        <% mediaDownloadUrl  = mediaUrlGenerator.getMediaDownloadUrl(f) %>
+        <% if (null != mediaThumbnailUrl) { %>
+            <span class="pip">
+                <img class="imageThumb" src="<%- mediaThumbnailUrl %>" data-val="<%- f %>"/><br/>
+                <span class="AknButtonList-item AknIconButton AknIconButton--grey clear-field remove">
+                    <i class="icon icon-trash"></i>
+                </span>
+            </span>
+        <% } %>
+        <% }) %>
+    <% } %>
+    </div>
+</div>
+
+

@@ -1,0 +1,4 @@
+# Byss/Bundle/AppBundle/Resources/config/form_extensions.yml
+
+attribute_fields:
+  byssapp_catalog_multi_image: byss/multi_image-field

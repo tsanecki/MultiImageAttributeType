@@ -1,0 +1,10 @@
+parameters:
+    pim_catalog.attribute_type.multi_image.class:            Byss\Bundle\AppBundle\AttributeType\MultiImageType
+
+services:
+    pim_catalog.attributetype.multi_image:
+        class: '%pim_catalog.attribute_type.multi_image.class%'
+        arguments:
+            - 'media'
+        tags:
+            - { name: pim_catalog.attribute_type, alias: byssapp_catalog_multi_image, entity: '%pim_catalog.entity.product.class%' }

@@ -1,0 +1,10 @@
+parameters:
+    pim_datagrid.product.attribute_type.byssapp_catalog_multi_image.templatea: ByssApp:datagrid/property:multi_image.html.twig
+    pim_datagrid.product.attribute_type.byssapp_catalog_multi_image:
+        column:
+            type:          product_value_field
+            frontend_type: multi_image
+        filter:
+            type:          product_value_multi_image
+            ftype:         asset
+        sorter: ~

@@ -1,0 +1,3 @@
+parameters:
+  byssapp_attribute_type.attribute_icons:
+    byssapp_catalog_multi_image: assetCollection

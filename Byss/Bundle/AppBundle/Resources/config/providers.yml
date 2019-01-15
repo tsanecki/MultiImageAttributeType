@@ -1,0 +1,28 @@
+parameters:
+  byssapp.provider.field.multi_image.class: Byss\Bundle\AppBundle\Enrich\Provider\Field\MultiImageFieldProvider
+  byssapp.updater.setter.multi_image.class: Byss\Bundle\AppBundle\Updater\Setter\MultiImageSetter
+  byssapp.updater.copier.multi_image.class: Byss\Bundle\AppBundle\Updater\Copier\MultiImageCopier
+
+services:
+  byssapp.provider.field.multi_image:
+    class: '%byssapp.provider.field.multi_image.class%'
+    tags:
+      - { name: pim_enrich.provider.field, priority: 100 }
+
+  byssapp.updater.setter.multi_image:
+    class: '%byssapp.updater.setter.multi_image.class%'
+    parent: pim_catalog.updater.setter.abstract
+    arguments:
+      - '@akeneo_file_storage.file_storage.file.file_storer'
+      - '@akeneo_file_storage.repository.file_info'
+      - ['byssapp_catalog_multi_image']
+    tags:
+      - {name: 'pim_catalog.updater.setter'}
+
+  byssapp.updater.copier.multi_image:
+    class: '%byssapp.updater.copier.multi_image.class%'
+    parent: pim_catalog.updater.copier.abstract
+    arguments:
+      - 'byssapp_catalog_multi_image'
+    tags:
+      - {name: 'pim_catalog.updater.copier'}

@@ -1,0 +1,9 @@
+config:
+  paths:
+    byss/multi_image-field:                            byssapp/js/product/field/multi_image-field
+    byss/template/product/field/multi_image:           byssapp/templates/product/field/multi_image-field.html
+
+  config:
+    pim/form/common/attributes/create-button:
+      attribute_icons:
+        byssapp_catalog_multi_image: assetCollection

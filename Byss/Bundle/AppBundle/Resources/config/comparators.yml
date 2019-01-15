@@ -1,0 +1,10 @@
+parameters:
+    pim_catalog.comparator.attribute.multi_image.class: Byss\Bundle\AppBundle\Updater\Comparator\MultiImageComparator
+
+services:
+    pim_extended_attribute_type.comparator.attribute.multi_image:
+        class: '%pim_catalog.comparator.attribute.multi_image.class%'
+        arguments:
+            - ['byssapp_catalog_multi_image']
+        tags:
+            - { name: pim_catalog.attribute.comparator }

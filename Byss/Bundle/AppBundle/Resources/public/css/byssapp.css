@@ -1,0 +1,42 @@
+.byss-multi-image input[type="file"] {
+    display:block;
+}
+
+.byss-multi-image .imageThumb {
+    max-height: 75px;
+    border: 1px dotted #999;
+    margin: 10px 10px 0 0;
+    padding: 1px;
+}
+
+.byss-multi-image .pip {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    clear: none;
+}
+
+.byss-multi-image .AknMediaField-emptyContainer {
+    width: 458px;
+    height: 140px;
+}
+
+
+.byss-multi-image .progress {
+    height: 10px;
+    width: 0;
+    clear: both;
+    background-color: #999;
+    opacity: 0;
+}
+
+.byss-multi-image {
+    background-color: #eee;
+}
+
+.byss-multi-image .AknMediaField {
+    background-color: white;
+}
+
+.byss-multi-image .preview {
+    padding: 5px;
+}

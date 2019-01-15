@@ -1,0 +1,3 @@
+parameters:
+    pim_catalog.entity.value.multi_image.class: Byss\Bundle\AppBundle\Model\MultiImageValue
+
